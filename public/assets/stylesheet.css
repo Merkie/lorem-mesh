@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --background: white;
+  --background-alternate: #fafafa;
+  --text: black;
+  --border: #edeaef;
+  --brand-blue: #4568dc;
+  --brand-purple: #b06ab3;
+  --sc: "Source Code Pro", monospace;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Begin helpers */
+button {
+  padding: 10px;
+  border: 1px solid var(--btn-color);
+  border-radius: 5px;
+  font-family: var(--sc);
+  font-size: 16px;
+  background: none;
+  color: var(--btn-color);
+  transition-duration: 0.1s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: var(--btn-color);
+  color: var(--background);
+  padding: 10px 15px;
+  border-radius: 0px;
+}
+
+/* Begin navigation */
+.nav {
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(90%, 1444px);
+  height: 50px;
+  position: sticky;
+  top: 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav p {
+  font-family: var(--sc);
+  font-size: 24px;
+  background: url("https://products.ls.graphics/mesh-gradients/images/32.-Banana-Mania.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* End navigation */
+
+/* Begin hero */
+.hero-section {
+  width: 100%;
+  border-bottom: var(--border) 1px solid;
+}
+
+.hero-section > :first-child {
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(90%, 1444px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-text-container,
+.hero-animation-container {
+  width: 50%;
+}
+
+.hero-animation-container {
+  background-color: hsl(243, 81%, 90%);
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  animation-name: bganimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.animation {
+  width: var(--size);
+  height: var(--size);
+  animation-name: circletosquare;
+  animation-duration: 5s;
+  animation-delay: var(--delay);
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.animation-action {
+  background-color: var(--background);
+  border: var(--border) 1px solid;
+  height: 50px;
+  display: flex;
+  padding: 15px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--sc);
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.hero-text-container h1 {
+  font-weight: 600;
+  margin-left: 25%;
+  width: 50%;
+  font-size: 40px;
+  font-family: var(--sc);
+}
+
+.hero-text-container span {
+  background: url("https://products.ls.graphics/mesh-gradients/images/32.-Banana-Mania.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text-container p {
+  margin-top: 20px;
+  margin-left: 25%;
+  width: 50%;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.hero-actions {
+  margin-top: 20px;
+  margin-left: 25%;
+  width: 50%;
+}
+
+/* End hero */
+
+/* Begin content */
+.content-section {
+  padding: 40px;
+  background: var(--background);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.content-section > :first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min(90%, 1444px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-image-container,
+.content-text-container {
+  width: 50%;
+  height: 300px;
+  position: relative;
+}
+
+.content-image-container img {
+  width: 300px;
+}
+
+.content-image-container div {
+  /* position: absolute; */
+  background-color: var(--brand-purple);
+  height: 50%;
+  width: 50%;
+  z-index: -1;
+  filter: blur(100px) opacity(0.3);
+}
+
+.content-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.content-text-container b {
+  font-family: var(--sc);
+  width: auto;
+  font-weight: 500;
+  font-size: 30px !important;
+}
+
+.content-text-container span {
+  background: url("https://products.ls.graphics/mesh-gradients/images/32.-Banana-Mania.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* End content section */
+
+/* begin api section */
+.api-section {
+  width: 100%;
+  background-color: var(--background-alternate);
+  padding: 40px;
+}
+
+.api-container {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% - 70px);
+}
+
+.api-section b {
+  font-family: var(--sc);
+  font-size: 30px;
+  font-weight: 500;
+  width: calc(100% - 75px);
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.api-section a i {
+  font-size: inherit;
+  margin-left: 5px;
+}
+
+.api-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  gap: 20px;
+}
+
+.api-element i {
+  font-size: 30px;
+}
+
+.api-element img {
+  width: 100%;
+  height: 100%;
+}
+
+.api-element div {
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--background);
+  border: 1px var(--border) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.api-element p {
+  color: black;
+  font-weight: 300;
+}
+
+.api-element a {
+  color: var(--brand-blue);
+}
+
+nav {
+  border-bottom: 1px solid var(--border);
+}
+
+nav > div {
+  padding: 20px;
+  width: min(90%, 1444px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.brand {
+  font-family: var(--sc);
+  font-size: 20px;
+  font-weight: 500;
+  background: url("https://products.ls.graphics/mesh-gradients/images/32.-Banana-Mania.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.playground-section {
+  width: 100%;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+
+.playground-section > div:first-child {
+  width: min(90%, 1444px);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+}
+
+.playground-header {
+  padding: 10px;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--brand-blue);
+  width: fit-content;
+  color: white;
+  border-radius: 5px;
+}
+
+.playground-section p {
+  font-family: var(--sc);
+  font-size: 20px;
+  font-weight: 300;
+  margin: 20px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  width: 60%;
+  text-align: center;
+  background-color: var(--background-alternate);
+}
+
+.playground-section input {
+  width: 20px;
+}
+
+@keyframes circletosquare {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+    border-radius: 100%;
+    border: calc(var(--size) / 10) solid var(--brand-blue);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scale(1.2);
+    border-radius: 0;
+    border: 5px solid var(--brand-purple);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+    border-radius: 100%;
+    border: 1px solid var(--brand-blue);
+  }
+}
+
+@keyframes bganimation {
+  from {
+    background-color: hsl(226, 68%, 90%);
+  }
+  50% {
+    background-color: hsl(298, 32%, 90%);
+  }
+  to {
+    background-color: hsl(226, 68%, 90%);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .hero-text-container h1 {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .hero-text-container p {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .hero-actions {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-section > :first-child {
+    flex-direction: column;
+  }
+
+  .content-section > :first-child {
+    flex-direction: row-reverse;
+  }
+
+  .content-image-container {
+    display: none;
+  }
+
+  .hero-text-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .content-text-container {
+    width: 100%;
+  }
+
+  .content-text-container b {
+    font-size: 50px;
+  }
+
+  .hero-animation-container {
+    margin-top: 20px;
+    width: calc(100% + 200px);
+    height: 200px;
+  }
+
+  .api-element {
+    flex-direction: column;
+    width: fit-content;
+    padding: 20px;
+  }
+
+  .api-element i {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-text-container h1 {
+    font-size: 30px;
+  }
+
+  .api-element {
+    font-size: 12px;
+  }
+
+  /* .api-container img {
+    width: 20%;
+  }
+
+  .api-container {
+    transform: translateX(-55px);
+  }
+
+  .api-element div {
+    width: 300px;
+  } */
+}

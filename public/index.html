@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts TODO: remove unsused font weights-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <!-- Bootstrap icons TODO: replace this with the SVGs-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css"
+    />
+
+    <title>Lorem-mesh | Mesh gradients</title>
+    <script src="assets/script.js" defer></script>
+    <link rel="stylesheet" href="assets/stylesheet.css" />
+    <!-- <link rel="stylesheet" href="assets/basic-styles.css"> -->
+    <!-- <link rel="stylesheet" href="assets/styles.css"> -->
+  </head>
+  <body>
+    <nav>
+      <div>
+        <p class="brand">lorem-mesh</p>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div>
+        <div class="hero-text-container">
+          <h1>
+            Placeholder images designed to <span>impress your clients</span>
+          </h1>
+          <p>
+            Lorem-mesh was created to deliver both practical and stylish
+            placeholder images to front-end developers
+          </p>
+          <div class="hero-actions">
+            <button style="--btn-color: black">
+              Github <i class="bi bi-github"></i>
+            </button>
+            <button style="--btn-color: var(--brand-purple)">
+              Support Me <i class="bi bi-heart"></i>
+            </button>
+          </div>
+        </div>
+        <div class="hero-animation-container">
+          <div
+            style="--size: 100px; --delay: 0s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 150px; --delay: 0.1s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 210px; --delay: 0.2s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 280px; --delay: 0.3s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 360px; --delay: 0.4s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 450px; --delay: 0.5s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 550px; --delay: 0.6s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 660px; --delay: 0.7s"
+            class="animation center"
+          ></div>
+          <div
+            style="--size: 780px; --delay: 0.8s"
+            class="animation center"
+          ></div>
+          <a href="#playground" class="animation-action center">
+            <p>Get started</p>
+            <i class="bi bi-box-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <div>
+        <div class="content-image-container">
+          <img class="center" src="assets/iphones.png" alt="" />
+          <div class="center"></div>
+        </div>
+        <div class="content-text-container">
+          <b><span>Mesh</span> your mock-ups</b>
+          <p>
+            Created with user experience first, lorem-mesh delivers soothing
+            mesh gradients that are perfect for both mockups and production
+            applications. Lorem-mesh is designed to be easily used and
+            customized to fit your design needs, our API provides intuitive
+            options for both image size and color.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="playground-section">
+      <div>
+        <div class="playground-header">PLAYGROUND</div>
+        <p>
+          I need
+          <input type="text" placeholder="1" value="1">
+          gradient(s) with the color of
+          <select name="pg-color" id="pg-color">
+            <option value="any">any</option>
+            <option value="iridescent">iridescent</option>
+            <option value="cool">cool</option>
+            <option value="warm">warm</option>
+          </select>
+          in the size
+          <select name="" id="">
+            <option value="full">full</option>
+            <option value="thumbnail">thumbnail</option>
+            <option value="tiny">tiny</option>
+          </select>.
+        </p>
+      </div>
+    </div>
+
+    <div class="api-section">
+      <b>Documentation:</b>
+      <div class="api-container">
+        <div class="api-element">
+          <div>
+            <a target="_blank" href="https://lorem-mesh.co/random"
+              >https://lorem-mesh.co/random <i class="bi bi-box-arrow-right"></i
+            ></a>
+            <p>This route will return one random gradient.</p>
+          </div>
+          <i class="bi bi-arrow-right"></i>
+          <div>
+            <img
+              src="https://products.ls.graphics/mesh-gradients/images/18.-Buttercup_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="api-element">
+          <div>
+            <a target="_blank" href="https://lorem-mesh.co/random"
+              >https://lorem-mesh.co/random/thumbnail
+              <i class="bi bi-box-arrow-right"></i
+            ></a>
+            <p>
+              This route will return one random gradient but as a thumbnail size
+              (30% of original).
+            </p>
+          </div>
+          <i class="bi bi-arrow-right"></i>
+          <div>
+            <img
+              src="https://products.ls.graphics/mesh-gradients/images/18.-Buttercup_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="api-element">
+          <div>
+            <a target="_blank" href="https://lorem-mesh.co/random"
+              >https://lorem-mesh.co/blue <i class="bi bi-box-arrow-right"></i
+            ></a>
+            <p>This route will return one random blue gradient.</p>
+          </div>
+          <i class="bi bi-arrow-right"></i>
+          <div>
+            <img
+              src="https://products.ls.graphics/mesh-gradients/images/18.-Buttercup_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="api-element">
+          <div>
+            <a target="_blank" href="https://lorem-mesh.co/random/full/10"
+              >https://lorem-mesh.co/random/full/10
+              <i class="bi bi-box-arrow-right"></i
+            ></a>
+            <p>This route will return ten random gradients.</p>
+          </div>
+          <i class="bi bi-arrow-right"></i>
+          <div>
+            <img
+              src="https://products.ls.graphics/mesh-gradients/images/18.-Buttercup_1.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
