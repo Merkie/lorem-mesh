@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -56,10 +57,16 @@
             placeholder images to front-end developers
           </p>
           <div class="hero-actions">
-            <button onClick="javascript:window.open('https://github.com/Merkie/lorem-mesh', '_blank');" style="--btn-color: black">
+            <button
+              onClick="javascript:window.open('https://github.com/Merkie/lorem-mesh', '_blank');"
+              style="--btn-color: black"
+            >
               Github <i class="bi bi-github"></i>
             </button>
-            <button onClick="javascript:window.open('https://ko-fi.com/merkie', '_blank');" style="--btn-color: var(--brand-purple)">
+            <button
+              onClick="javascript:window.open('https://ko-fi.com/merkie', '_blank');"
+              style="--btn-color: var(--brand-purple)"
+            >
               Support Me <i class="bi bi-heart"></i>
             </button>
           </div>
@@ -101,8 +108,8 @@
             style="--size: 780px; --delay: 0.8s"
             class="animation center"
           ></div>
-          <a href="#playground" class="animation-action center">
-            <p>Get started</p>
+          <a href="#api" class="animation-action center">
+            <p>API Documentation</p>
             <i class="bi bi-box-arrow-right"></i>
           </a>
         </div>
@@ -132,42 +139,43 @@
       <div>
         <div class="playground-header">PLAYGROUND</div>
         <p>
-          I need a gradient with a <select name="pg-color" id="pg-color">
+          I need a gradient with a
+          <select name="pg-color" id="pg-color">
             <option value="random">random</option>
             <option value="iridescent">iridescent</option>
             <option value="cool">cool</option>
             <option value="warm">warm</option>
-          </select> color scheme in the size
+          </select>
+          color scheme in the size
           <select name="pg-size" id="pg-size">
             <option value="full">full</option>
             <option value="thumbnail">thumbnail</option>
-            <option value="tiny">tiny</option>
-          </select>.
+            <option value="tiny">tiny</option></select
+          >.
         </p>
         <div class="pg-split">
-          <div> <a id="pg-anchor" href="">https://lorem-mesh.com/api/</a></div>
-          <div><img id="pg-img" src="" alt=""></div>
+          <div>
+            <div><a id="pg-anchor" href="">https://lorem-mesh.com/api/</a></div>
+            <div><img id="pg-img" src="" alt="" /></div>
+          </div>
         </div>
-       
       </div>
     </div>
 
-    <div class="api-section">
+    <div class="api-section" id="api">
       <b>Documentation:</b>
       <div class="api-container">
         <div class="api-element">
           <div>
             <a target="_blank" href="https://lorem-mesh.co/api/random"
-              >https://lorem-mesh.co/api/random <i class="bi bi-box-arrow-right"></i
+              >https://lorem-mesh.co/api/random
+              <i class="bi bi-box-arrow-right"></i
             ></a>
             <p>This route will return one random gradient.</p>
           </div>
           <i class="bi bi-arrow-right"></i>
           <div>
-            <img
-              src="https://lorem-mesh.co/api/random"
-              alt=""
-            />
+            <img src="https://lorem-mesh.co/api/random" alt="" />
           </div>
         </div>
         <div class="api-element">
@@ -180,46 +188,56 @@
               This route will return one random gradient but as a thumbnail size
               (25% of original).
             </p>
+            <p>Other options: tiny, full</p>
           </div>
           <i class="bi bi-arrow-right"></i>
           <div>
-            <img
-              src="https://lorem-mesh.co/api/random/thumbnail"
-              alt=""
-            />
+            <img src="https://lorem-mesh.co/api/random/thumbnail" alt="" />
           </div>
         </div>
         <div class="api-element">
           <div>
             <a target="_blank" href="https://lorem-mesh.co/api/cool/thumbnail"
-              >https://lorem-mesh.co/api/cool/ <i class="bi bi-box-arrow-right"></i
+              >https://lorem-mesh.co/api/cool/
+              <i class="bi bi-box-arrow-right"></i
             ></a>
-            <p>This route will return one random gradient with a cooler color scheme.</p>
+            <p>
+              This route will return one random gradient with a cooler color
+              scheme.
+            </p>
+            <p>Other options: random, warm, iridescent</p>
           </div>
           <i class="bi bi-arrow-right"></i>
           <div>
-            <img
-              src="https://lorem-mesh.co/api/cool/thumbnail"
-              alt=""
-            />
+            <img src="https://lorem-mesh.co/api/cool/thumbnail" alt="" />
           </div>
         </div>
       </div>
     </div>
+    <div class="footer-section">
+      <p>Made with <i class="bi bi-heart"></i> by Archer</p>
+      <p>Gradients from <a href="https://products.ls.graphics/mesh-gradients/">https://products.ls.graphics/mesh-gradients/ <i class="bi bi-box-arrow-right"></i></a></p>
+    </div>
+
     <script defer>
       function updateLink() {
-        const link = `https://lorem-mesh.co/api/${document.getElementById('pg-color').value}/${document.getElementById('pg-size').value}`;
-        document.getElementById('pg-anchor').innerHTML = link;
-        document.getElementById('pg-img').src = link;
+        const link = `https://lorem-mesh.co/api/${
+          document.getElementById("pg-color").value
+        }/${document.getElementById("pg-size").value}`;
+        document.getElementById("pg-anchor").innerHTML = link+' <i class="bi bi-box-arrow-right"></i>';
+        document.getElementById("pg-anchor").href = link;
+        document.getElementById("pg-img").src = link;
       }
 
-      document.getElementById('pg-color').addEventListener('change', (e) => {
+      document.getElementById("pg-color").addEventListener("change", (e) => {
         updateLink();
       });
 
-      document.getElementById('pg-size').addEventListener('change', (e) => {
+      document.getElementById("pg-size").addEventListener("change", (e) => {
         updateLink();
       });
+
+      updateLink();
     </script>
   </body>
 </html>

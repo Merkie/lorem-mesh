@@ -262,6 +262,7 @@ button:hover {
   align-items: center;
   width: 70%;
   gap: 20px;
+  text-align: center;
 }
 
 .api-element i {
@@ -357,6 +358,66 @@ nav > div {
   width: 20px;
 }
 
+.pg-split {
+  display: flex;
+  width: 100%;
+}
+
+.pg-split > div:first-child {
+  width: 55%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pg-split > div:first-child > div {
+  /* width: 30%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background-color: var(--background-alternate);
+  height: fit-content;
+}
+
+.pg-split a {
+  color: var(--brand-blue);
+}
+
+.pg-split a i {
+  margin-left: 5px;
+}
+
+#pg-img {
+  width: 200px;
+}
+
+.footer-section {
+  width: calc(100% - 80px);
+  background-color: var(--background);
+  padding: 40px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+}
+
+.footer-section a {
+  color: var(--brand-blue);
+}
+
+.footer-section a i {
+  margin-left: 5px;
+}
+
 @keyframes circletosquare {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -445,6 +506,19 @@ nav > div {
   .api-element i {
     transform: rotate(90deg);
   }
+
+  .pg-split > div:first-child {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .pg-split > div:first-child > div {
+    width: 100%;
+  }
+
+  .playground-section > div > p {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -452,9 +526,9 @@ nav > div {
     font-size: 30px;
   }
 
-  .api-element {
+  /* .api-element {
     font-size: 12px;
-  }
+  } */
 
   /* .api-container img {
     width: 20%;
