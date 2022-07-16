@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  overflow-x:hidden;
 }
 
 :root {
@@ -278,6 +277,10 @@ button:hover {
   width: 70%;
   gap: 20px;
   text-align: center;
+}
+
+.api-element * {
+  overflow-x: visible !important;
 }
 
 .api-element i {
