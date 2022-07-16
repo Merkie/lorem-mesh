@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  overflow-x:hidden;
 }
 
 :root {
@@ -25,7 +26,7 @@ html {
 
 body {
   font-family: "Source Sans Pro", sans-serif;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* Begin helpers */
@@ -107,6 +108,7 @@ button:hover {
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  overflow-x:visible !important;
 }
 
 .animation {
@@ -147,6 +149,19 @@ button:hover {
   background-size: cover;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-wrapper {
+  overflow-x: visible !important;
+}
+
+.hero-wrapper *::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-wrapper * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .hero-text-container p {
