@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  overflow-x: hidden;
 }
 
 :root {
@@ -494,7 +493,7 @@ nav > div {
 
   .hero-animation-container {
     margin-top: 20px;
-    width: calc(100% + 200px);
+    width: calc(100% + 80px);
     height: 200px;
   }
 
