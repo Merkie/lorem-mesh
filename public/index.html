@@ -37,8 +37,6 @@
     <title>Lorem-mesh | Mesh gradients</title>
     <script src="assets/script.js" defer></script>
     <link rel="stylesheet" href="assets/stylesheet.css" />
-    <!-- <link rel="stylesheet" href="assets/basic-styles.css"> -->
-    <!-- <link rel="stylesheet" href="assets/styles.css"> -->
   </head>
   <body>
     <nav>
@@ -58,10 +56,10 @@
             placeholder images to front-end developers
           </p>
           <div class="hero-actions">
-            <button style="--btn-color: black">
+            <button onClick="javascript:window.open('https://github.com/Merkie/lorem-mesh', '_blank');" style="--btn-color: black">
               Github <i class="bi bi-github"></i>
             </button>
-            <button style="--btn-color: var(--brand-purple)">
+            <button onClick="javascript:window.open('https://ko-fi.com/merkie', '_blank');" style="--btn-color: var(--brand-purple)">
               Support Me <i class="bi bi-heart"></i>
             </button>
           </div>
@@ -134,22 +132,23 @@
       <div>
         <div class="playground-header">PLAYGROUND</div>
         <p>
-          I need
-          <input type="text" placeholder="1" value="1">
-          gradient(s) with the color of
-          <select name="pg-color" id="pg-color">
-            <option value="any">any</option>
+          I need a gradient with a <select name="pg-color" id="pg-color">
+            <option value="random">random</option>
             <option value="iridescent">iridescent</option>
             <option value="cool">cool</option>
             <option value="warm">warm</option>
-          </select>
-          in the size
-          <select name="" id="">
+          </select> color scheme in the size
+          <select name="pg-size" id="pg-size">
             <option value="full">full</option>
             <option value="thumbnail">thumbnail</option>
             <option value="tiny">tiny</option>
           </select>.
         </p>
+        <div class="pg-split">
+          <div> <a id="pg-anchor" href="">https://lorem-mesh.com/api/</a></div>
+          <div><img id="pg-img" src="" alt=""></div>
+        </div>
+       
       </div>
     </div>
 
@@ -193,7 +192,7 @@
         <div class="api-element">
           <div>
             <a target="_blank" href="https://lorem-mesh.co/api/cool/thumbnail"
-              >https://lorem-mesh.co/api/cool/thumbnail <i class="bi bi-box-arrow-right"></i
+              >https://lorem-mesh.co/api/cool/ <i class="bi bi-box-arrow-right"></i
             ></a>
             <p>This route will return one random gradient with a cooler color scheme.</p>
           </div>
@@ -207,5 +206,20 @@
         </div>
       </div>
     </div>
+    <script defer>
+      function updateLink() {
+        const link = `https://lorem-mesh.co/api/${document.getElementById('pg-color').value}/${document.getElementById('pg-size').value}`;
+        document.getElementById('pg-anchor').innerHTML = link;
+        document.getElementById('pg-img').src = link;
+      }
+
+      document.getElementById('pg-color').addEventListener('change', (e) => {
+        updateLink();
+      });
+
+      document.getElementById('pg-size').addEventListener('change', (e) => {
+        updateLink();
+      });
+    </script>
   </body>
 </html>

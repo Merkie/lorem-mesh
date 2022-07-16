@@ -78,6 +78,14 @@ app.get("/api/:color?/:size?", (req: Request, res: Response) => {
     } else if(size == "tiny") {
         list = warm_gradients_tiny;
     }
+  } else if(color == "iridescent") {
+    if(size == "full") {
+      list = iridescent_gradients_full;
+    } else if(size == "thumbnail") {
+        list = iridescent_gradients_thumbnail;
+    } else if(size == "tiny") {
+        list = iridescent_gradients_tiny;
+    }
   }
   
   // If all goes well send the file but if not send a little error
